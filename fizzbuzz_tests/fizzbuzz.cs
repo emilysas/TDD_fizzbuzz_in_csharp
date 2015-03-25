@@ -5,20 +5,17 @@ namespace fizzbuzz_tests
 {
 	public class Game
 	{
-		private static Dictionary<int, string> values = new Dictionary<int, string> ();
-		values.Add (3, "fizz");
-		//				.Add (5, "buzz")
-		//				.Add (15, "fizzbuzz");
 
 		public static void Main (string[] args)
 		{
+			CreateDictionary ();
 			GetInput ();
-			GetNum ();
+			GetNum (input);
 			FizzBuzz(input, num, out string result);
 			Console.WriteLine (result);
 		}
 			
-		public static string FizzBuzz(string input, int num, out string result)
+		private static string FizzBuzz(string input, int num, out string result)
 		{
 			var keys = values.Keys;
 			foreach(var key in keys)
@@ -34,6 +31,23 @@ namespace fizzbuzz_tests
 			}
 		}
 
+		private static dictionary CreateDictionary
+		{
+			CreateValues();
+			AddValues();
+		}
+
+		private static dictionary CreateValues
+		{
+			Dictionary<int, string> values = new Dictionary<int, string> ();
+		}
+
+		private static dictionary AddValues
+		{
+			values.Add (3, "fizz");
+			values.Add (5, "buzz");
+			values.Add (15, "fizzbuzz");
+		}
 		private static string GetInput (out string input)
 		{
 			input = Console.ReadLine ();

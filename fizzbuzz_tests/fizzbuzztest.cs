@@ -12,7 +12,7 @@ namespace fizzbuzz_tests
 		public void FizzIfFactorOf3()
 		{
 			Game game = new Game();
-			Assert.AreEqual ("fizz", game.FizzBuzz (3));
+			Assert.AreEqual ("fizz", game.FizzBuzz ("3", 3));
 		}
 			
 	}
