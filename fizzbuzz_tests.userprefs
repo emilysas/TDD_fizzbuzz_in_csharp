@@ -1,8 +1,9 @@
 ﻿<Properties StartupItem="fizzbuzz_tests/fizzbuzz_tests.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="fizzbuzz_tests/fizzbuzztest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="fizzbuzz_tests/fizzbuzz.cs">
     <Files>
-      <File FileName="fizzbuzz_tests/fizzbuzztest.cs" Line="3" Column="3" />
+      <File FileName="fizzbuzz_tests/fizzbuzztest.cs" Line="2" Column="2" />
+      <File FileName="fizzbuzz_tests/fizzbuzz.cs" Line="2" Column="2" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.NUnit.TestPad">
