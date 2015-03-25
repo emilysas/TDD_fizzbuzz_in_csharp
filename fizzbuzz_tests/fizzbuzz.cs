@@ -5,36 +5,35 @@ namespace fizzbuzz_tests
 {
 	public class Game
 	{
+		private static Dictionary<int, string> values = new Dictionary<int, string> ();
+		values.Add (3, "fizz");
+		//				.Add (5, "buzz")
+		//				.Add (15, "fizzbuzz");
+
 		public static void Main (string[] args)
 		{
 			string input = Console.ReadLine ();
 			int num = int.Parse (input);
 
-			Dictionary<int, string> dictionary = new Dictionary<int, string> ();
 
-			dictionary.Add (3, "fizz")
-//				.Add (5, "buzz")
-//				.Add (15, "fizzbuzz");
-
-			FizzBuzz(input, num, dictionary);
-
+			string result;
+			FizzBuzz(input, num, out result);
+			Console.WriteLine (result);
 		}
-
-		string value;
-
-		public static FizzBuzz(string input, int num, dictionary dictionary, out string)
+			
+		public static string FizzBuzz(string input, int num, out string result)
 		{
 
-			var keys = dictionary.Keys;
+			var keys = values.Keys;
 			foreach(var key in keys)
 			{
 				if (num % key == 0)
 				{
-					Console.WriteLine (dictionary[key]);
+					result = values[key];
 				}
 				else
 				{
-					Console.WriteLine (input);
+					result = input;
 				}
 			}
 		}
