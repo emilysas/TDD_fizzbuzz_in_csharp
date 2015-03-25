@@ -12,18 +12,14 @@ namespace fizzbuzz_tests
 
 		public static void Main (string[] args)
 		{
-			string input = Console.ReadLine ();
-			int num = int.Parse (input);
-
-
-			string result;
-			FizzBuzz(input, num, out result);
+			GetInput ();
+			GetNum ();
+			FizzBuzz(input, num, out string result);
 			Console.WriteLine (result);
 		}
 			
 		public static string FizzBuzz(string input, int num, out string result)
 		{
-
 			var keys = values.Keys;
 			foreach(var key in keys)
 			{
@@ -36,6 +32,16 @@ namespace fizzbuzz_tests
 					result = input;
 				}
 			}
+		}
+
+		private static string GetInput (out string input)
+		{
+			input = Console.ReadLine ();
+		}
+
+		private static int GetNum (string input, out int num)
+		{
+			num = int.Parse (input);
 		}
 	}
 }
