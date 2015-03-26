@@ -8,54 +8,44 @@ namespace fizzbuzz_tests
 
 		public static void Main (string[] args)
 		{
-			CreateDictionary ();
-			GetInput ();
-			GetNum (input);
-			FizzBuzz(input, num, out string result);
+			Dictionary<int, string> values = new Dictionary<int, string> ();
+			AddValues ();
+			string input = GetInput ();
+			int num = GetNum (input);
+			string result = FizzBuzz(input, num);
 			Console.WriteLine (result);
 		}
 			
-		private static string FizzBuzz(string input, int num, out string result)
+		public static string FizzBuzz(string input, int num)
 		{
 			var keys = values.Keys;
 			foreach(var key in keys)
 			{
 				if (num % key == 0)
 				{
-					result = values[key];
+					return values[key];
 				}
 				else
 				{
-					result = input;
+					return input;
 				}
 			}
 		}
-
-		private static dictionary CreateDictionary
-		{
-			CreateValues();
-			AddValues();
-		}
-
-		private static dictionary CreateValues
-		{
-			Dictionary<int, string> values = new Dictionary<int, string> ();
-		}
-
-		private static dictionary AddValues
+	
+		private static void AddValues()
 		{
 			values.Add (3, "fizz");
 			values.Add (5, "buzz");
 			values.Add (15, "fizzbuzz");
 		}
-		private static string GetInput (out string input)
+		private static string GetInput ()
 		{
-			input = Console.ReadLine ();
+			return Console.ReadLine ();
 		}
 
-		private static int GetNum (string input, out int num)
+		private static int GetNum (string input)
 		{
-			num = int.Parse (input);
+			return int.Parse (input);
 		}
 	}
 }
