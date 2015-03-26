@@ -5,7 +5,7 @@ namespace fizzbuzz_tests
 {
 
 	[TestFixture]
-	public class FizzBuzz
+	public class FizzBuzzTest
 	{
 
 		[Test]
