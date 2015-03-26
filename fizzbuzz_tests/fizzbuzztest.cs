@@ -11,8 +11,8 @@ namespace fizzbuzz_tests
 		[Test]
 		public void FizzIfFactorOf3()
 		{
-			Game game = new Game();
-			Assert.AreEqual ("fizz", game.FizzBuzz ("3", 3));
+			var fizzbuzz = new FizzBuzz ();
+			Assert.AreEqual ("fizz", fizzbuzz.Result (3));
 		}
 			
 	}
