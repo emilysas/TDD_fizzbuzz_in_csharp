@@ -32,6 +32,12 @@ namespace fizzbuzz_tests
 		{
 			Assert.AreEqual ("fizzbuzz", fizzbuzz.Result (15));
 		}
+
+		[Test]
+		public void NumberIfNotDivisibleBy3or5()
+		{
+			Assert.AreEqual ("7", fizzbuzz.Result (7));
+		}
 	}
 }
 
