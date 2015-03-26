@@ -14,7 +14,12 @@ namespace fizzbuzz_tests
 			var fizzbuzz = new FizzBuzz ();
 			Assert.AreEqual ("fizz", fizzbuzz.Result (3));
 		}
-			
+
+		public void BuzzIfFactorOf5()
+		{
+			var fizzbuzz = new FizzBuzz ();
+			Assert.AreEqual ("buzz", fizzbuzz.Result (5));
+		}
 	}
 }
 

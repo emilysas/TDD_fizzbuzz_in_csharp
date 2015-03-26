@@ -5,7 +5,7 @@ namespace fizzbuzz_tests
 {
 	public class FizzBuzz
 	{		
-		public void CreateFizzBuzzDictionary()
+		public FizzBuzz()
 		{
 			CreateValues ();
 			AddValues ();
