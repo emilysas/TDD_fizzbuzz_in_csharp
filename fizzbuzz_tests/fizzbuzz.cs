@@ -19,9 +19,9 @@ namespace fizzbuzz_tests
 
 		private void AddValues()
 		{
+			values.Add (15, "fizzbuzz");
 			values.Add (3, "fizz");
 			values.Add (5, "buzz");
-			values.Add (15, "fizzbuzz");
 		}
 
 		public string Result (int num)
